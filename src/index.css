@@ -1,0 +1,255 @@
+/* === Variables === */
+:root {
+  --clr-primary: #1a1a1a;
+  --clr-accent: #646cff;
+  --clr-white: #fff;
+  --clr-dark: #213547;
+
+  --max-width: 1200px;
+
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-size: 0.95rem;
+
+  color: var(--clr-dark);
+  background: rgb(209, 190, 168);
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* === Reset === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+/* === Links & Buttons === */
+a {
+  font-weight: 500;
+  color: var(--clr-accent);
+  text-decoration: none;
+  transition: color 0.25s;
+}
+a:hover {
+  color: #535bf2;
+}
+
+button,
+.order-btn,
+.btn {
+  border-radius: 8px;
+  border: none;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+button:hover,
+.order-btn:hover,
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.order-btn,
+.btn {
+  background: var(--clr-accent);
+  color: var(--clr-white);
+  margin-top: 0.8rem;
+  display: inline-block;
+}
+
+/* === Navbar === */
+.navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: #f9f9f9ee;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.nav-center {
+  max-width: var(--max-width);
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 1rem;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--clr-dark);
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+
+.nav-links a {
+  color: var(--clr-dark);
+  font-weight: 600;
+  padding: 0.3rem 0.6rem;
+}
+.nav-links a:hover {
+  color: var(--clr-accent);
+}
+
+/* === Hero === */
+.hero {
+  text-align: center;
+  padding: 4rem 1rem 3rem;
+  background: linear-gradient(to right, #eef4fa, #dce9f5);
+}
+.hero h1 {
+  font-size: 2.8rem;
+  margin: 0.5rem 0;
+}
+.hero p {
+  max-width: 600px;
+  margin: auto;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+/* === Sections === */
+.section {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--clr-primary);
+}
+
+/* === Products Grid === */
+
+/* Product Grid */
+
+.product-section h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+  width: 100%;
+  /* justify-items: center; */
+}
+.products:only-child,
+.products:has(img:only-child) {
+  display: flex;
+  justify-content: center;
+}
+
+/* Product Card */
+.product {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.product:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Product Image */
+.product-img {
+  width: 100%;
+  height: 250px; /* keeps consistent size */
+  object-fit: cover; /* keeps proportions, no stretching */
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  display: block; /* removes the white line issue */
+}
+.product-img:hover {
+  transform: scale(1.05);
+}
+
+@supports not (aspect-ratio: 4/3) {
+  .product-img {
+    height: 220px;
+  }
+}
+
+/* === Questionnaire === */
+.questionnaire {
+  padding: 2.5rem 1rem;
+  text-align: center;
+  background: #eef4fa;
+  margin-top: 3rem;
+  border-radius: 12px;
+}
+.questionnaire h2 {
+  margin-bottom: 1rem;
+}
+.poll-btn {
+  margin: 0.3rem;
+  background: var(--clr-dark);
+  color: var(--clr-white);
+}
+.poll-message {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--clr-primary);
+}
+
+/* === Thanks Message === */
+.thanks {
+  font-size: 1.1rem;
+  font-style: italic;
+  margin-top: 2rem;
+  color: #444;
+}
+
+/* === Footer === */
+.footer {
+  background: #222;
+  color: #bbb;
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 3rem;
+}
+.footer p {
+  margin: 0.3rem 0;
+}
+.stars {
+  font-size: 1.2rem;
+  color: gold;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .nav-links {
+    gap: 0.6rem;
+  }
+}
