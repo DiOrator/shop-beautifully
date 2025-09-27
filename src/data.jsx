@@ -18,7 +18,7 @@ export const heroLinks = [
   { id: 1, href: '#earrings', text: 'Earrings' },
 
   { id: 4, href: '#bracelets', text: 'Bracelets' },
-  { id: 5, href: '#necklaces', text: 'Necklaces' },
+  // { id: 5, href: '#necklaces', text: 'Necklaces' },
 ];
 
 export const earrings = [{ id: 1, image: earring1 }];
