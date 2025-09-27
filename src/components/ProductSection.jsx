@@ -10,7 +10,7 @@ const ProductSection = ({ id, title, items }) => {
         ))}
       </div>
       {/* One single button per section */}
-      <a href='https://wa.me/2349025799243' className='order-btn'>
+      <a href='https://wa.me/2347040284996' className='order-btn'>
         Order Now
       </a>
     </section>
