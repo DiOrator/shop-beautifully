@@ -267,6 +267,8 @@ html,
 body {
   height: 100%;
   scroll-behavior: smooth;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 a {
@@ -321,6 +323,7 @@ button:hover,
   justify-content: space-between;
   align-items: center;
   padding: 0.6rem 1rem;
+  flex-wrap: wrap;
 }
 
 .logo {
@@ -333,6 +336,9 @@ button:hover,
   display: flex;
   gap: 1rem;
   list-style: none;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
 }
 
 .nav-links a {
@@ -381,15 +387,10 @@ button:hover,
 
 .products {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 1.5rem;
   margin: 2rem 0;
   width: 100%;
-}
-.products:only-child,
-.products:has(img:only-child) {
-  display: flex;
-  justify-content: center;
 }
 
 .product {
@@ -410,9 +411,9 @@ button:hover,
 
 .product-img {
   width: 100%;
-  height: 250px;
+  aspect-ratio: 1; /* keeps images square and proportional */
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 8px 8px 0 0;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
   display: block;
@@ -427,12 +428,6 @@ button:hover,
   font-size: 1rem;
   color: var(--clr-primary);
   margin-top: 0.5rem;
-}
-
-@supports not (aspect-ratio: 4/3) {
-  .product-img {
-    height: 220px;
-  }
 }
 
 .questionnaire {
@@ -478,41 +473,37 @@ button:hover,
   color: gold;
 }
 
-/* === MOBILE FIX: keep desktop layout proportion === */
+/* === MOBILE FIXES: fit screen === */
 @media (max-width: 768px) {
   .hero h1 {
-    font-size: 2.8rem; /* same as desktop */
+    font-size: 2.2rem;
   }
   .hero p {
-    font-size: 1.1rem; /* same as desktop */
+    font-size: 1rem;
   }
   .products {
-    grid-template-columns: repeat(
-      auto-fill,
-      minmax(200px, 1fr)
-    ); /* same as desktop */
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1rem;
   }
   .product-img {
-    height: 250px; /* same as desktop */
-  }
+    aspect-ratio: 1;
+  } /* square images */
 }
 
 @media (max-width: 480px) {
   .hero h1 {
-    font-size: 2.8rem; /* same as desktop */
+    font-size: 1.8rem;
   }
   .hero p {
-    font-size: 1.1rem; /* same as desktop */
+    font-size: 0.9rem;
   }
   .products {
-    grid-template-columns: repeat(
-      auto-fill,
-      minmax(200px, 1fr)
-    ); /* same as desktop */
-    gap: 1.5rem;
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
   .product-img {
-    height: 250px; /* same as desktop */
-  }
+    width: 100%;
+    height: auto;
+    aspect-ratio: auto;
+  } /* fit width fully */
 }
