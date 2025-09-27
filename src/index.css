@@ -442,15 +442,19 @@ button:hover,
 
 .product-img {
   width: 100%;
-  max-height: 180px; /* reduce the size */
+  max-height: 180px;
   object-fit: cover;
   border-radius: 8px 8px 0 0;
+  border: 2px solid rgba(0, 0, 0, 0.3); /* subtle black border */
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: block;
+  background: transparent;
 }
+
 .product-img:hover {
   transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
 }
 
 .product h3 {
@@ -537,4 +541,22 @@ button:hover,
     height: auto;
     aspect-ratio: auto;
   } /* fit width fully */
+}
+#earrings h2 {
+  color: #4e3939;
+}
+#body-sprays h2 {
+  color: #4e3939;
+}
+#perfumes h2 {
+  color: #4e3939;
+}
+#watches h2 {
+  color: #4e3939;
+}
+#necklaces h2 {
+  color: #4e3939;
+}
+#bracelets h2 {
+  color: #4e3939;
 }

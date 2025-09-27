@@ -16,11 +16,9 @@ import watch5 from './assets/Images/watch-5.jpg';
 
 export const heroLinks = [
   { id: 1, href: '#earrings', text: 'Earrings' },
-  { id: 2, href: '#body-sprays', text: 'Body Sprays' },
-  { id: 3, href: '#watches', text: 'Watches' },
+
   { id: 4, href: '#bracelets', text: 'Bracelets' },
   { id: 5, href: '#necklaces', text: 'Necklaces' },
-  { id: 6, href: '#perfumes', text: 'Perfumes' },
 ];
 
 export const earrings = [{ id: 1, image: earring1 }];

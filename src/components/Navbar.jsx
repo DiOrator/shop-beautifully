@@ -4,7 +4,9 @@ const Navbar = () => {
   return (
     <nav className='navbar'>
       <div className='nav-center'>
-        <h2 className='logo'>Shop Beautifully!</h2>
+        <h2 className='logo' style={{ color: ' rgb(209, 190, 168)' }}>
+          SHOP BEAUTIFULLY!
+        </h2>
         <ul className='nav-links'>
           {heroLinks.map((link) => (
             <li key={link.id}>

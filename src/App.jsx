@@ -25,16 +25,16 @@ function App() {
       <Hero />
       <main>
         {/* Correct order: Earrings → Body Sprays → Watches → Bracelets → Necklaces → Perfumes */}
-        <ProductSection id='earrings' title='Earrings' items={earrings} />
+        <ProductSection id='earrings' title='EARRINGS' items={earrings} />
         <ProductSection
           id='body-sprays'
-          title='Body Sprays'
+          title='BODY SPRAYS'
           items={bodysprays}
         />
-        <ProductSection id='watches' title='Watches' items={watches} />
-        <ProductSection id='bracelets' title='Bracelets' items={bracelets} />
-        <ProductSection id='necklaces' title='Necklaces' items={necklaces} />
-        <ProductSection id='perfumes' title='Perfumes' items={perfumes} />
+        <ProductSection id='watches' title='WATCHES' items={watches} />
+        <ProductSection id='bracelets' title='BRACELETS' items={bracelets} />
+        <ProductSection id='necklaces' title='NECKLACES' items={necklaces} />
+        <ProductSection id='perfumes' title='PERFUMES' items={perfumes} />
 
         <section className='section'>
           <p className='thanks'>
