@@ -5,7 +5,7 @@ const Navbar = () => {
     <nav className='navbar'>
       <div className='nav-center'>
         <h2 className='logo' style={{ color: ' rgb(209, 190, 168)' }}>
-          SHOP BEAUTIFULLY WITH BLESSING!
+          SHOP BEAUTIFULLY WITH BLESSING
         </h2>
         <ul className='nav-links'>
           {heroLinks.map((link) => (
